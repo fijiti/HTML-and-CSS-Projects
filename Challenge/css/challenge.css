@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  text-align: center;
+  display: block;
+  background-color: blue;
+  border: 2px solid black;
+  border-radius: 27px;
+  color: #fff;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  filter: drop-shadow(7px 7px 9px blue);
+  border-radius: 27px;
+}
+
+footer {
+  text-align: center;
+  display: block;
+  background-color: blue;
+  color: #fff;
+  padding: 2px;
+  font-weight: bold;
+  border-radius: 27px;
+  border: 2px solid black;
+  border-radius: 27px;
+}
+
+video {
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 90%;
+  filter: drop-shadow(7px 7px 9px blue);
+  border-radius: 27px;
+  
+}
+
+#movies {
+  margin: 30px 0;
+  width: 100%;
+}
+
+#movies td,
+#movies th {
+  border: 2px solid #000;
+  padding: 7px;
+}
+
+#movies th {
+  background: green;
+}
+
+#movies td {
+  font-size: x-large;
+}
+
+.center-bottom {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  font-size: x-large;
+  color: white;
+  
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #0000ff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+.main {
+  padding: 16px;
+  margin-top: 50px;
+}
+
+/* Used to create two equal columns.  */
+.column {
+  float: left;
+  width: 50%;
+  
+  padding: 20px;
+}
+
+/*   Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hover_test {
+  margin: 20px;
+  text-align: center;
+  display: block;
+  background-color: blue;
+  border: 2px solid black;
+  border-radius: 27px;
+  color: #fff;
+}
+
+.hover_test p {
+  font-size: xx-large;
+  margin: 50px 10px;
+  text-align: center;
+  display: block;
+  background-color: green;
+  border: 2px solid black;
+  border-radius: 27px;
+  color: #fff;
+  
+}
+
+.hover_test p:hover {
+  display: block;
+  background-color: yellow;
+  color: black;
+  border: 2px solid black;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #fff;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: blue;
+  font-size: x-large;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container_movies {
+  margin: 30px;
+  border: solid black;
+  border-radius: 27px;
+  background-color: blue;
+  color: white;
+  text-align:center;
+}
