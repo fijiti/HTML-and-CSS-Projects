@@ -1,109 +1,195 @@
 <!DOCTYPE html>
-<html lang="eng">
-    <head>
-        <title>Animals</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" href="./css/one_page_website.css">
-    </head>
-    <body>
-		<!-- NAV -->  
-		<nav>
-			<ul>
-				<a href="#home" id="link"><li>HOME</li></a>
-				<a href="#gallery"><li>GALLERY</li></a>
-				<a href="#contact"><li>CONTACT</li></a>
-			    <a href="#videos"><li>VIDEOS</li></a>
-			</ul>
-		</nav>
-		<!-- END NAV -->
-		
-		<!-- HOME -->
-		<div id="home">
-			<div>
-				<h1>Animals</h1>
-				<p>There are all kinds of animals in the world today.</p>
-			</div>
-		</div>
-		<!-- END HOME -->
-       
-		<h3>Here Are Some Different Types of Animals:</h3>
- 
-        <!-- GALLERY -->  
-		<section>
-			<div id="gallery">
-				
-				<div>
-					<h3>Giraffes</h3>
-					<img src="./images/thumb/thumbnail_1.png">
-				</div>
+<html lang="en">
+<!-- HEAD -->
 
-				<div>
-					<h3>Lions</h3>
-					<img src="./images/thumb/thumbnail_2.png">
-				</div>
-				
-				<div>
-					<h3>Bears</h3>
-					<img src="./images/thumb/thumbnail_3.png">
-				</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animals</title>
+    <link rel="stylesheet" href="./css/one_page_website.css">
+    <script src="./js/one_page_website.js" defer></script>
+</head>
+<!-- END HEAD -->
 
-				<div>
-					<h3>Cows</h3>
-					<img src="./images/thumb/thumbnail_4.png">
-				</div>
-					
-				<div>
-					<h3>Tigers</h3>
-					<img src="./images/thumb/thumbnail_5.png">
-				</div>
+<body>
+    <!-- NAV -->
+    <div id="navbar">
+        <a href="#home" class="active">HOME</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#videos">VIDEOS</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+    <!-- END NAV -->
 
-				<div>
-					<h3>Wolves</h3>
-					<img src="./images/thumb/thumbnail_6.png">
-				</div>
-				
-				<div>
-					<h3>Foxes</h3>
-					<img src="./images/thumb/thumbnail_7.png">
-				</div>
-			</div>
-		</section>
-        <!-- END GALLERY -->
-		
+    <!-- HOME -->
+    <div id="home" style="text-align: center;">
+        <div>
+            <h1>Animals</h1>
+            <p>There are all kinds of animals in the world today.</p>
+        </div>
+    </div>
+    <!-- END HOME -->
 
-        
-        <!-- VIDEOS -->
-        <section>
-			<div id="videos">
-				<h3>Here are some videos of Tigers and Wolves:</h3>
-				<div>
-					<h3>Tigers Video:</h3>
-					<iframe width="853" height="480" src="https://www.youtube.com/embed/FK3dav4bA4s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-				<div>
-					<h3>Wolves Video:</h3>
-					<iframe width="853" height="480" src="https://www.youtube.com/embed/YXMo5w9aMNs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-        </section>
-        <!-- END VIDEOS -->
-		
-		<!-- CONTACT FORM -->
-        <section>
-			<h3>Here is a place for contact information:</h3>
-			<div id="contact">
-				<form action="" method="post">
-					First name: <input type="text" name="First_Name"><br>
-					Last name: <input type="text" name="Last_Name"><br>
-					Email: <input type="email" name="Email"><br>
-					Phone Number: <input type="text" name="Phone_Number"><br>
-					<input type="submit" value="Submit">
-				</form>
-			</div>
-        </section>
-        <!-- END CONTACT FORM -->
-        
-    </body>
-    <footer>
-		<p>Author: fijiti</p>
+    <!-- GALLERY -->
+    <section>
+        <!-- Images to open the light box -->
+        <div class="row" id="gallery">
+
+            <h3 class="center">Animal Gallery Light Box</h3>
+            <div class="column">
+                <img src="./images/lion.jpg" alt="Lion" class="hover-shadow cursor"
+                    onclick="openModal();currentSlide(1)" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="./images/tiger.jpg" alt="Tiger" class="hover-shadow cursor"
+                    onclick="openModal();currentSlide(2)" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="./images/bear.jpg" alt="Bear" class="hover-shadow cursor"
+                    onclick="openModal();currentSlide(3)" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="./images/wolf.jpg" alt="Wolf" class="hover-shadow cursor"
+                    onclick="openModal();currentSlide(4)" style="width:100%">
+            </div>
+            <div class="column">
+                <img src="./images/cow.jpg" alt="Cow" class="hover-shadow cursor" onclick="openModal();currentSlide(5)"
+                    style="width:100%">
+            </div>
+            <div class="column">
+                <img src="./images/fox.jpg" alt="Fox" class="hover-shadow cursor" onclick="openModal();currentSlide(6)"
+                    style="width:100%">
+            </div>
+            <div class="column">
+                <img src="./images/giraffe.jpg" alt="Giraffe" class="hover-shadow cursor"
+                    onclick="openModal();currentSlide(7)" style="width:100%">
+            </div>
+
+
+            <!-- The Modal/Lightbox -->
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 7</div>
+                        <img src="./images/lion_wide.jpg" alt="Lion" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 7</div>
+                        <img src="./images/tiger_wide.jpg" alt="Tiger" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 7</div>
+                        <img src="./images/bear_wide.jpg" alt="Bear" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 7</div>
+                        <img src="./images/wolf_wide.jpg" alt="Wolf" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 7</div>
+                        <img src="./images/cow_wide.jpg" alt="Cow" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 7</div>
+                        <img src="./images/fox_wide.jpg" alt="Fox" style="width:100%">
+                    </div>
+                    <div class="mySlides">
+                        <div class="numbertext">7 / 7</div>
+                        <img src="./images/giraffe_wide.jpg" alt="Giraffe" style="width:100%">
+                    </div>
+
+                    <!-- Next/previous controls -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <!-- Caption text -->
+                    <div class="caption-container">
+                        <p id="caption">
+                        </p>
+                    </div>
+
+                    <!-- Thumbnail image controls -->
+                    <div class="column">
+                        <img class="demo cursor" style="width: 100%" src="./images/lion.jpg" alt="Lion"
+                            onclick="currentSlide(1)">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" style="width: 100%" src="./images/tiger.jpg" alt="Tiger"
+                            onclick="currentSlide(2)">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" style="width: 100%" src="./images/bear.jpg" alt="Bear"
+                            onclick="currentSlide(3)">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" style="width: 100%" src="./images/wolf.jpg" alt="Wolf"
+                            onclick="currentSlide(4)">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" style="width: 100%" src="./images/cow.jpg" alt="Cow"
+                            onclick="currentSlide(5)">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" style="width: 100%" src="./images/fox.jpg" alt="Fox"
+                            onclick="currentSlide(6)">
+                    </div>
+                    <div class="column">
+                        <img class="demo cursor" style="width: 100%" src="./images/giraffe.jpg" alt="Giraffe"
+                            onclick="currentSlide(7)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END GALLERY -->
+
+    <!-- VIDEOS -->
+    <section>
+        <div class="center" id="videos">
+            <h3>Tigers Video:</h3>
+            <div class="video-container">
+              
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FK3dav4bA4s?&autoplay=1&mute=1"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <br><br>
+            <h3>Wolves Video:</h3>
+            <div class="video-container">
+                
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YXMo5w9aMNs?&autoplay=1&mute=1"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- END VIDEOS -->
+
+    <!-- CONTACT FORM -->
+    <section>
+        <div id="contact" class="center">
+            <h3>Contact Information:</h3>
+            <form action="">
+                <label for="fname">First Name</label>
+                <input id="fname" type="text" name="firstname" placeholder="Your first name..">
+                <label for="lname">Last Name</label>
+                <input id="lname" type="text" name="lastname" placeholder="Your last name...">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Your email...">
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="text" name="phone" placeholder="Your phone number...">
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </section>
+    <!-- END CONTACT FORM -->
+
+    <!-- FOOTER -->
+    <footer class="center">
+        <p>Author: fijiti</p>
     </footer>
-</html>
+    <!--END FOOTER -->
+</body>
+
+</html> 
